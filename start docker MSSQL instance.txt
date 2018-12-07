@@ -1,0 +1,7 @@
+##Start a mssql server instance
+docker run -d -p 1433:1433 -e sa_password=Welcome2018! -e ACCEPT_EULA=Y microsoft/mssql-server-windows-developer
+
+docker container ls
+CONTAINER ID        IMAGE                                      COMMAND                  CREATED             STATUS                    PORTS                    NAMES
+f83278606536        microsoft/mssql-server-windows-developer   "powershell -Command…"   17 minutes ago      Up 17 minutes (healthy)   0.0.0.0:1433->1433/tcp   hungry_lewin
+docker container inspect f83278606536
